@@ -4,15 +4,34 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="700" Width="1250" MinHeight="250" MinWidth="500" >
+
+    <Window.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="menuStyle" TargetType="{x:Type Button}">
+                <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <!--menu-->
-        <Grid>
+        <!-- Left Menu Bar -->
+        <StackPanel Grid.Row="0">
+            <!-- Menu Items -->
+            <Button Content="Table" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button Content="SQL" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button Content="SourceGenerator" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button Content="EQS/DBSource" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button Content="EAM" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button Content="Settings" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <ToggleButton Height="100" VerticalAlignment="Top" Content="Themes" IsChecked="{Binding ThemeSelect}" Command="{Binding ThemeClickCommand}"/>
-        </Grid>
+        </StackPanel>
+
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
 </Window>
