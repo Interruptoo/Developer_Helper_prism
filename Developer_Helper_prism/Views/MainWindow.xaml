@@ -9,7 +9,10 @@
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ContentControl prism:RegionManager.RegionName="MenuRegion"/>
+        <!--menu-->
+        <Grid>
+            <ToggleButton Height="100" VerticalAlignment="Top" Content="Themes" IsChecked="{Binding ThemeSelect}" Command="{Binding ThemeClickCommand}"/>
+        </Grid>
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
 </Window>
