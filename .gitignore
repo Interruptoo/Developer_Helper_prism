@@ -1,0 +1,9 @@
+#Developer_Helper_prism ignore
+#2025-01-02 create
+
+
+
+*.vsidx
+bin/
+obj/
+.vs/
