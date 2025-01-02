@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Developer_Helper_prism", "Developer_Helper_prism.csproj", "{920D2A26-1D19-49DF-8203-26E55FBD682A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableInfo", "..\TableInfo\TableInfo.csproj", "{95C1AED1-2030-4ECF-A66E-383227409280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core.csproj", "{DFD89E9E-C84D-4C65-AFE3-62461677AAE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{920D2A26-1D19-49DF-8203-26E55FBD682A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{920D2A26-1D19-49DF-8203-26E55FBD682A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{920D2A26-1D19-49DF-8203-26E55FBD682A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C1AED1-2030-4ECF-A66E-383227409280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C1AED1-2030-4ECF-A66E-383227409280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C1AED1-2030-4ECF-A66E-383227409280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C1AED1-2030-4ECF-A66E-383227409280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD89E9E-C84D-4C65-AFE3-62461677AAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD89E9E-C84D-4C65-AFE3-62461677AAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD89E9E-C84D-4C65-AFE3-62461677AAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD89E9E-C84D-4C65-AFE3-62461677AAE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
