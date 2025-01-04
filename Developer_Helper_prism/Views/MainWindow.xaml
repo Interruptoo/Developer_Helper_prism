@@ -21,8 +21,7 @@
         </Grid.ColumnDefinitions>
         <!--menu-->
         <!-- Left Menu Bar -->
-        <StackPanel Grid.Row="0">
-            <!-- Menu Items -->
+        <UniformGrid Columns="1">
             <Button Content="Table" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="SQL" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="SourceGenerator" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
@@ -30,8 +29,8 @@
             <Button Content="EAM" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="Settings" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <ToggleButton Height="100" VerticalAlignment="Top" Content="Themes" IsChecked="{Binding ThemeSelect}" Command="{Binding ThemeClickCommand}"/>
-        </StackPanel>
-
+        </UniformGrid>
+        
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
 </Window>
