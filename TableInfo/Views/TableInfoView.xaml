@@ -27,7 +27,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Orientation="Horizontal">
-            <!--<TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" />-->
+            <TextBox Height="20" Margin="5,0,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>
             <!--<uc:DHTextBox x:Name="PART_ContentHost" Height="20" MinWidth="160" Margin="5,2,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" VerticalContentAlignment="Center" />-->
             <ComboBox x:Name="cboAndOr" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="55" Height="20" Margin="0,1,0,0" SelectedIndex="0" SelectedValuePath="Content">
                 <ComboBoxItem Content="AND" IsSelected="True"/>
@@ -50,7 +50,7 @@
         </StackPanel>
         
         <StackPanel Grid.Column="2" Orientation="Horizontal">
-            <TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" />
+            <TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>
             <!--<uc:DHTextBox x:Name="txtKeywordCol" Height="20" MinWidth="160" Margin="5,2,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />-->
             
             <ComboBox x:Name="cboAndOrCol" Grid.Column="1" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Center" Width="55" Height="20" SelectedIndex="0" SelectedValuePath="Content">
@@ -58,8 +58,8 @@
                 <ComboBoxItem Content="OR"/>
             </ComboBox>
         </StackPanel>
-        <DockPanel Grid.Column="4" LastChildFill="False">
-            <TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" DockPanel.Dock="Left"/>
+        <StackPanel Grid.Column="4" Orientation="Horizontal">
+            <TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>
             <!--<uc:DHTextBox x:Name="txtKeywordObj" Height="20" MinWidth="160" Margin="5,2,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />-->
             <ComboBox x:Name="cboAndOrObj" Grid.Column="1" HorizontalAlignment="Left" Margin="0,1,0,0"  Width="55" Height="20" VerticalAlignment="Center" SelectedIndex="0" SelectedValuePath="Content">
                 <ComboBoxItem Content="AND" IsSelected="True"/>
@@ -72,7 +72,7 @@
                     <TextBlock Text="조회" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="11" TextWrapping="WrapWithOverflow" Margin="5, 0, 5, 0" />
                 </StackPanel>
             </Button>
-        </DockPanel>
+        </StackPanel>
 
         <!--row 1 col 0-->
         <Grid Grid.Row="1" Background="#F0F0F0">
@@ -366,7 +366,7 @@
             </DataGrid>
         </Grid>
         <!--row 1 col 1-->
-        <GridSplitter Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="5"/>
+        <GridSplitter Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="5"/>
         <!--row 1 col 2-->
         <Grid Grid.Row="1" Grid.Column="2" Background="#F0F0F0">
             <Grid.RowDefinitions>
@@ -410,7 +410,7 @@
             </DataGrid>
         </Grid>
         <!--row 1 col 3-->
-        <GridSplitter Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="5"/>
+        <GridSplitter Grid.Row="0" Grid.RowSpan="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="5"/>
         <!--row 1 col 4-->
         <Grid Grid.Row="1" Grid.Column="4" Background="#F0F0F0">
             <DataGrid >

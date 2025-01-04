@@ -5447,4 +5447,9 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style TargetType="{x:Type StackPanel}">
+        <Setter Property="Background" Value="{DynamicResource Button.Static.Background}"/>
+    </Style>
+
 </ResourceDictionary>
