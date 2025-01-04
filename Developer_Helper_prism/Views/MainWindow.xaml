@@ -8,9 +8,23 @@
     <Window.Resources>
         <ResourceDictionary>
 
-            <Style x:Key="menuStyle" TargetType="{x:Type Button}">
-                <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
-            </Style>
+            <!--<Style TargetType="{x:Type Button}">
+                --><!--<Setter Property="FontSize" Value="12"/>--><!--
+                <Setter Property="Foreground" Value="Black" />
+                --><!--<Setter Property="VerticalAlignment" Value="Center"/>--><!--
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseDirectlyOver" Value="True">
+                        --><!--<Setter Property="Foreground" Value="White"/>--><!--
+                        <Setter Property="Background" Value="#0274ad"/>
+                    </Trigger>
+                    <Trigger Property="IsFocused" Value="True">
+                        <Setter Property="Background" Value="#0274ad"/>
+                        --><!--<Setter Property="Foreground" Value="White"/>--><!--
+                        <Setter Property="FontWeight" Value="Bold"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>-->
         </ResourceDictionary>
     </Window.Resources>
     
@@ -22,7 +36,7 @@
         <!--menu-->
         <!-- Left Menu Bar -->
         <UniformGrid Columns="1">
-            <Button Content="Table" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button Content="Table" Command="{Binding NavigateCommand}" CommandParameter="TableInfoView" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="SQL" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="SourceGenerator" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="EQS/DBSource" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>

@@ -1,6 +1,7 @@
 ﻿using Developer_Helper_prism.Themes;
 using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Regions;
 using System.Windows.Input;
 
 namespace Developer_Helper_prism.ViewModels
@@ -25,21 +26,31 @@ namespace Developer_Helper_prism.ViewModels
             get { return _themeSelect; }
             set { SetProperty(ref _themeSelect, value); }
         }
+
+        private readonly IRegionManager _regionManager;
         #endregion
 
         #region [Command]
         public DelegateCommand ThemeClickCommand { get;}
+
+        public DelegateCommand<string> NavigateCommand { get; private set; }
         #endregion
 
         #region [Constructor]
-        public MainWindowViewModel()
+        public MainWindowViewModel(IRegionManager regionManager)
         {
+            _regionManager = regionManager;
+
             ThemeClickCommand = new DelegateCommand(ChangeTheme);
+            NavigateCommand = new DelegateCommand<string>(Navigate);
         }
 
         #endregion
 
         #region [Method]
+        /// <summary>
+        /// Theme Change
+        /// </summary>
         private void ChangeTheme()
         {
             //switch (Mode)
@@ -68,6 +79,15 @@ namespace Developer_Helper_prism.ViewModels
                 ThemesController.SetTheme(ThemeType.LightTheme);
             else
                 ThemesController.SetTheme(ThemeType.DeepDark);
+        }
+
+        /// <summary>
+        /// menuClick Command Method
+        /// </summary>
+        /// <param name="menuName"></param>
+        private void Navigate(string menuName)
+        {
+            _regionManager.RequestNavigate("ContentRegion", menuName);
         }
         #endregion
     }
