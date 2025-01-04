@@ -78,7 +78,7 @@ namespace Developer_Helper_prism.ViewModels
             if(ThemeSelect)
                 ThemesController.SetTheme(ThemeType.LightTheme);
             else
-                ThemesController.SetTheme(ThemeType.DeepDark);
+                ThemesController.SetTheme(ThemeType.DarkGreyTheme);
         }
 
         /// <summary>

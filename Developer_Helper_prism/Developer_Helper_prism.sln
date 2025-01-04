@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Developer_Helper_prism", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableInfo", "..\TableInfo\TableInfo.csproj", "{2F342664-97A6-482F-8E2C-69F46FEADE48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "..\CustomControls\CustomControls.csproj", "{78A548AD-684A-4AC2-AB38-357CCD124B2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2F342664-97A6-482F-8E2C-69F46FEADE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F342664-97A6-482F-8E2C-69F46FEADE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F342664-97A6-482F-8E2C-69F46FEADE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A548AD-684A-4AC2-AB38-357CCD124B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A548AD-684A-4AC2-AB38-357CCD124B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A548AD-684A-4AC2-AB38-357CCD124B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A548AD-684A-4AC2-AB38-357CCD124B2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

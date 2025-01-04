@@ -8,6 +8,7 @@
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj" />
     <ProjectReference Include="..\TableInfo\TableInfo.csproj" />
   </ItemGroup>
 </Project>
