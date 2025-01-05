@@ -13,25 +13,17 @@ namespace Developer_Helper_prism.ViewModels
         #endregion
 
         #region [Property]
-        private string _title = "Prism Application";
+        private string _title = "Developer_Helper_Prism";
         public string Title
         {
             get { return _title; }
             set { SetProperty(ref _title, value); }
         }
 
-        private bool _themeSelect;
-        public bool ThemeSelect
-        {
-            get { return _themeSelect; }
-            set { SetProperty(ref _themeSelect, value); }
-        }
-
         private readonly IRegionManager _regionManager;
         #endregion
 
         #region [Command]
-        public DelegateCommand ThemeClickCommand { get;}
 
         public DelegateCommand<string> NavigateCommand { get; private set; }
         #endregion
@@ -41,46 +33,12 @@ namespace Developer_Helper_prism.ViewModels
         {
             _regionManager = regionManager;
 
-            ThemeClickCommand = new DelegateCommand(ChangeTheme);
             NavigateCommand = new DelegateCommand<string>(Navigate);
         }
 
         #endregion
 
         #region [Method]
-        /// <summary>
-        /// Theme Change
-        /// </summary>
-        private void ChangeTheme()
-        {
-            //switch (Mode)
-            //{
-            //    case "0":
-            //        ThemesController.SetTheme(ThemeType.DeepDark);
-            //        break;
-            //    case "1":
-            //        ThemesController.SetTheme(ThemeType.SoftDark);
-            //        break;
-            //    case "2":
-            //        ThemesController.SetTheme(ThemeType.DarkGreyTheme);
-            //        break;
-            //    case "3":
-            //        ThemesController.SetTheme(ThemeType.GreyTheme);
-            //        break;
-            //    case "4":
-            //        ThemesController.SetTheme(ThemeType.LightTheme);
-            //        break;
-            //    case "5":
-            //        ThemesController.SetTheme(ThemeType.RedBlackTheme);
-            //        break;
-            //}
-
-            if(ThemeSelect)
-                ThemesController.SetTheme(ThemeType.LightTheme);
-            else
-                ThemesController.SetTheme(ThemeType.DarkGreyTheme);
-        }
-
         /// <summary>
         /// menuClick Command Method
         /// </summary>

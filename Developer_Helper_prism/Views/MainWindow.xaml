@@ -1,6 +1,7 @@
 ﻿<Window x:Class="Developer_Helper_prism.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="700" Width="1250" MinHeight="250" MinWidth="500" >
@@ -36,14 +37,52 @@
         <!--menu-->
         <!-- Left Menu Bar -->
         <UniformGrid Columns="1">
-            <Button Content="Table" Command="{Binding NavigateCommand}" CommandParameter="TableInfoView" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="TableInfoView" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Tag="Table">
+                <StackPanel>
+                    <Image Width="20" Height="20" Source="/Developer_Helper_prism;component/Image/Icon/DBTable.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Text="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=Button}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="11" TextWrapping="WrapWithOverflow" Margin="5, 0, 5, 0" />
+                </StackPanel>
+            </Button>
             <Button Content="SQL" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="SourceGenerator" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="EQS/DBSource" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
             <Button Content="EAM" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
-            <Button Content="Settings" Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Tag}"
+                    Tag="Setting">
+                <StackPanel>
+                    <Image Width="20" Height="20" Source="/Developer_Helper_prism;component/Image/Icon/gnome-run.ico" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Text="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=Button}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="11" TextWrapping="WrapWithOverflow" Margin="5, 0, 5, 0" />
+                </StackPanel>
+            </Button>
             <ToggleButton Height="100" VerticalAlignment="Top" Content="Themes" IsChecked="{Binding ThemeSelect}" Command="{Binding ThemeClickCommand}"/>
+            <StackPanel>
+                <TextBlock Text="Theme"/>
+                <ComboBox ToolTip="{Binding RelativeSource={RelativeSource AncestorType=ComboBoxItem}, Path=Content}" SelectedIndex="0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Selected">
+                            <prism:InvokeCommandAction Command="{Binding ThemeClickCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ComboBoxItem}, Path=Content}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <ComboBoxItem Content="DarkGreyTheme"/>
+                    <ComboBoxItem Content="SoftDark" />
+                    <ComboBoxItem Content="RedBlackTheme" />
+                    <ComboBoxItem Content="DeepDark" />
+                    <ComboBoxItem Content="GreyTheme" />
+                    <ComboBoxItem Content="LightTheme" />
+                </ComboBox>
+            </StackPanel>
         </UniformGrid>
+
+        <!--<ListBox ItemsSource="{Binding }">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Width="20" Height="20"/>
+                        <TextBlock />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>-->
         
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
     </Grid>

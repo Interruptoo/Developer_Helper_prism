@@ -70,6 +70,7 @@
     <None Remove="Image\Icon\date.png" />
     <None Remove="Image\Icon\date2.gif" />
     <None Remove="Image\Icon\day.gif" />
+    <None Remove="Image\Icon\DBTable.png" />
     <None Remove="Image\Icon\delete.png" />
     <None Remove="Image\Icon\denied.gif" />
     <None Remove="Image\Icon\Disk.png" />
@@ -102,6 +103,7 @@
     <None Remove="Image\Icon\forward.gif" />
     <None Remove="Image\Icon\frown.gif" />
     <None Remove="Image\Icon\ftp.gif" />
+    <None Remove="Image\Icon\gnome-run.ico" />
     <None Remove="Image\Icon\go-last.png" />
     <None Remove="Image\Icon\go-next.png" />
     <None Remove="Image\Icon\graph.gif" />
@@ -162,6 +164,7 @@
     <None Remove="Image\Icon\text-x-changelog.png" />
     <None Remove="Image\Icon\text-x-script.png" />
     <None Remove="Image\Icon\text-x-source.png" />
+    <None Remove="Image\Icon\TextTemplate.ico" />
     <None Remove="Image\Icon\time.gif" />
     <None Remove="Image\Icon\titlewindow.gif" />
     <None Remove="Image\Icon\toggle.gif" />
@@ -191,6 +194,7 @@
     <None Remove="Image\Icon\zoomout.gif" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
@@ -262,6 +266,7 @@
     <Resource Include="Image\Icon\date.png" />
     <Resource Include="Image\Icon\date2.gif" />
     <Resource Include="Image\Icon\day.gif" />
+    <Resource Include="Image\Icon\DBTable.png" />
     <Resource Include="Image\Icon\delete.png" />
     <Resource Include="Image\Icon\denied.gif" />
     <Resource Include="Image\Icon\Disk.png" />
@@ -294,6 +299,7 @@
     <Resource Include="Image\Icon\forward.gif" />
     <Resource Include="Image\Icon\frown.gif" />
     <Resource Include="Image\Icon\ftp.gif" />
+    <Resource Include="Image\Icon\gnome-run.ico" />
     <Resource Include="Image\Icon\go-last.png" />
     <Resource Include="Image\Icon\go-next.png" />
     <Resource Include="Image\Icon\graph.gif" />
@@ -354,6 +360,7 @@
     <Resource Include="Image\Icon\text-x-changelog.png" />
     <Resource Include="Image\Icon\text-x-script.png" />
     <Resource Include="Image\Icon\text-x-source.png" />
+    <Resource Include="Image\Icon\TextTemplate.ico" />
     <Resource Include="Image\Icon\time.gif" />
     <Resource Include="Image\Icon\titlewindow.gif" />
     <Resource Include="Image\Icon\toggle.gif" />

@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TableInfo.Views"
+             xmlns:uc="clr-namespace:CustomControls;assembly=CustomControls"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1200">
 
@@ -27,8 +28,8 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Orientation="Horizontal">
-            <TextBox Height="20" Margin="5,0,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>
-            <!--<uc:DHTextBox x:Name="PART_ContentHost" Height="20" MinWidth="160" Margin="5,2,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" VerticalContentAlignment="Center" />-->
+            <!--<TextBox Height="20" Margin="5,0,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>-->
+            <uc:DHTextBox x:Name="txtKeyword" Height="20" MinWidth="160" Margin="5,1,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" VerticalContentAlignment="Center" />
             <ComboBox x:Name="cboAndOr" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="55" Height="20" Margin="0,1,0,0" SelectedIndex="0" SelectedValuePath="Content">
                 <ComboBoxItem Content="AND" IsSelected="True"/>
                 <ComboBoxItem Content="OR"/>
@@ -50,8 +51,8 @@
         </StackPanel>
         
         <StackPanel Grid.Column="2" Orientation="Horizontal">
-            <TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>
-            <!--<uc:DHTextBox x:Name="txtKeywordCol" Height="20" MinWidth="160" Margin="5,2,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />-->
+            <!--<TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>-->
+            <uc:DHTextBox x:Name="txtKeywordCol" Height="20" MinWidth="160" Margin="5,1,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />
             
             <ComboBox x:Name="cboAndOrCol" Grid.Column="1" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Center" Width="55" Height="20" SelectedIndex="0" SelectedValuePath="Content">
                 <ComboBoxItem Content="AND" IsSelected="True"/>
@@ -59,8 +60,8 @@
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Column="4" Orientation="Horizontal">
-            <TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>
-            <!--<uc:DHTextBox x:Name="txtKeywordObj" Height="20" MinWidth="160" Margin="5,2,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />-->
+            <!--<TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>-->
+            <uc:DHTextBox x:Name="txtKeywordObj" Height="20" MinWidth="160" Margin="5,1,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />
             <ComboBox x:Name="cboAndOrObj" Grid.Column="1" HorizontalAlignment="Left" Margin="0,1,0,0"  Width="55" Height="20" VerticalAlignment="Center" SelectedIndex="0" SelectedValuePath="Content">
                 <ComboBoxItem Content="AND" IsSelected="True"/>
                 <ComboBoxItem Content="OR"/>
