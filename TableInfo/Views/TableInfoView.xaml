@@ -59,7 +59,7 @@
                 <ComboBoxItem Content="OR"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Grid.Column="4" Orientation="Horizontal">
+        <DockPanel Grid.Column="4" LastChildFill="False">
             <!--<TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>-->
             <uc:DHTextBox x:Name="txtKeywordObj" Height="20" MinWidth="160" Margin="5,1,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />
             <ComboBox x:Name="cboAndOrObj" Grid.Column="1" HorizontalAlignment="Left" Margin="0,1,0,0"  Width="55" Height="20" VerticalAlignment="Center" SelectedIndex="0" SelectedValuePath="Content">
@@ -73,7 +73,7 @@
                     <TextBlock Text="조회" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="11" TextWrapping="WrapWithOverflow" Margin="5, 0, 5, 0" />
                 </StackPanel>
             </Button>
-        </StackPanel>
+        </DockPanel>
 
         <!--row 1 col 0-->
         <Grid Grid.Row="1" Background="#F0F0F0">

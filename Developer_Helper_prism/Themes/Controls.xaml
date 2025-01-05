@@ -5452,6 +5452,10 @@
     <Style TargetType="{x:Type StackPanel}">
         <Setter Property="Background" Value="{DynamicResource Button.Static.Background}"/>
     </Style>
+    
+    <Style TargetType="{x:Type DockPanel}">
+        <Setter Property="Background" Value="{DynamicResource Button.Static.Background}"/>
+    </Style>
 
     <Style x:Key="copyButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="UIElement.Opacity" Value="0.7" />
