@@ -73,16 +73,18 @@
             </StackPanel>--><!--
         </UniformGrid>-->
 
-        <ListBox ItemsSource="{Binding }">
-            <ListBox.ItemTemplate>
+        <ItemsControl ItemsSource="{Binding MenuCollection}">
+            <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <Image Width="20" Height="20"/>
-                        <TextBlock />
-                    </StackPanel>
+                    <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding MenuName}" ToolTip="{Binding MenuTooltip}">
+                        <StackPanel>
+                            <Image Width="20" Height="20" Source="{Binding MenuIcon}"/>
+                            <TextBlock Text="{Binding MenuTitle}"/>
+                        </StackPanel>
+                    </Button>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
         
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
     </Grid>

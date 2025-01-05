@@ -15,5 +15,6 @@ namespace Developer_Helper_prism.Model
         public string MenuDescription { get; set; }
         public string MenuIcon { get; set; }
         public string MenuTitle { get; set; }
+        public string MenuTooltip { get; set; }
     }
 }

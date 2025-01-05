@@ -63,12 +63,12 @@ namespace Developer_Helper_prism.ViewModels
         {
             MenuCollection =
             [
-                new MenuModel { MenuName = "TableInfoView", MenuTitle = "Table", MenuDescription = "", MenuIcon = "/Developer_Helper_prism;component/Image/Icon/DBTable.png" },
-                new MenuModel { MenuName = "SQLExcuteView", MenuTitle = "SQL", MenuDescription = "", MenuIcon = "" },
-                new MenuModel { MenuName = "SourceGeneratorView", MenuTitle = "SourceGenerator", MenuDescription = "", MenuIcon = "" },
-                new MenuModel { MenuName = "DBSourceView", MenuTitle = "EQS/DBSource", MenuDescription = "", MenuIcon = "" },
-                new MenuModel { MenuName = "EAMInfoView", MenuTitle = "EAM", MenuDescription = "", MenuIcon = "" },
-                new MenuModel { MenuName = "SettingView", MenuTitle = "Setting", MenuDescription = "", MenuIcon = "/Developer_Helper_prism;component/Image/Icon/gnome-run.ico" },
+                new MenuModel { MenuName = "TableInfoView", MenuTitle = "Table", MenuTooltip = "Table", MenuDescription = "", MenuIcon = "/Developer_Helper_prism;component/Image/Icon/DBTable.png" },
+                new MenuModel { MenuName = "SQLExcuteView", MenuTitle = "SQL", MenuTooltip = "SQL", MenuDescription = "", MenuIcon = "" },
+                new MenuModel { MenuName = "SourceGeneratorView", MenuTitle = "SG", MenuTooltip = "SourceGenerator", MenuDescription = "", MenuIcon = "" },
+                new MenuModel { MenuName = "DBSourceView", MenuTitle = "DBSource", MenuTooltip = "DBSource", MenuDescription = "", MenuIcon = "" },
+                new MenuModel { MenuName = "EAMInfoView", MenuTitle = "EAM", MenuTooltip = "EAM", MenuDescription = "", MenuIcon = "" },
+                new MenuModel { MenuName = "SettingView", MenuTitle = "Setting", MenuTooltip = "Setting", MenuDescription = "", MenuIcon = "/Developer_Helper_prism;component/Image/Icon/gnome-run.ico" },
             ];
         }
 
