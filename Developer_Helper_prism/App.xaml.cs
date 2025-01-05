@@ -1,4 +1,6 @@
-﻿using Developer_Helper_prism.Views;
+﻿using Developer_Helper_prism.Interface;
+using Developer_Helper_prism.Model;
+using Developer_Helper_prism.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
@@ -27,7 +29,7 @@ namespace Developer_Helper_prism
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

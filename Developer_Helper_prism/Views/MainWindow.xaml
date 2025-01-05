@@ -36,7 +36,7 @@
         </Grid.ColumnDefinitions>
         <!--menu-->
         <!-- Left Menu Bar -->
-        <UniformGrid Columns="1">
+        <!--<UniformGrid Columns="1">
             <Button Command="{Binding NavigateCommand}" CommandParameter="TableInfoView" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Tag="Table">
                 <StackPanel>
                     <Image Width="20" Height="20" Source="/Developer_Helper_prism;component/Image/Icon/DBTable.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -54,7 +54,7 @@
                     <TextBlock Text="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=Button}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="11" TextWrapping="WrapWithOverflow" Margin="5, 0, 5, 0" />
                 </StackPanel>
             </Button>
-            <!--<ToggleButton Height="100" VerticalAlignment="Top" Content="Themes" IsChecked="{Binding ThemeSelect}" Command="{Binding ThemeClickCommand}"/>-->
+            --><!--<ToggleButton Height="100" VerticalAlignment="Top" Content="Themes" IsChecked="{Binding ThemeSelect}" Command="{Binding ThemeClickCommand}"/>-->
             <!--<StackPanel>
                 <TextBlock Text="Theme"/>
                 <ComboBox ToolTip="{Binding RelativeSource={RelativeSource AncestorType=ComboBoxItem}, Path=Content}" SelectedIndex="0">
@@ -70,10 +70,10 @@
                     <ComboBoxItem Content="GreyTheme" />
                     <ComboBoxItem Content="LightTheme" />
                 </ComboBox>
-            </StackPanel>-->
-        </UniformGrid>
+            </StackPanel>--><!--
+        </UniformGrid>-->
 
-        <!--<ListBox ItemsSource="{Binding }">
+        <ListBox ItemsSource="{Binding }">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -82,7 +82,7 @@
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-        </ListBox>-->
+        </ListBox>
         
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
