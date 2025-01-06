@@ -19,17 +19,18 @@ namespace Developer_Helper_prism
             return Container.Resolve<MainWindow>();
         }
 
-        //protected override void OnInitialized()
-        //{
-        //    base.OnInitialized();
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
 
-        //    var regionManager = Container.Resolve<IRegionManager>();
-        //    regionManager.RequestNavigate("ContentRegion", "TableInfoView");
-        //}
+            var regionManager = Container.Resolve<IRegionManager>();
+            //regionManager.RequestNavigate("ContentRegion", "TableInfoView");
+            regionManager.RequestNavigate("LeftMenuRegion", "MenuView");
+        }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+            containerRegistry.RegisterForNavigation<MenuView>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

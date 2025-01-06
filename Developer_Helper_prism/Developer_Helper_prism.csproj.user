@@ -7,6 +7,11 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\MenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Themes\ColourDictionaries\DarkGreyTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -44,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MenuView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

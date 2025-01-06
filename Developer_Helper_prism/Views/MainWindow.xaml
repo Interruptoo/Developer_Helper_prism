@@ -35,7 +35,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <!-- Left Menu Bar -->
-        <ItemsControl ItemsSource="{Binding MenuCollection}">
+        <!--<ItemsControl ItemsSource="{Binding MenuCollection}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding MenuName}" ToolTip="{Binding MenuTooltip}">
@@ -46,8 +46,9 @@
                     </Button>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
-        </ItemsControl>
-        
+        </ItemsControl>-->
+
+        <ContentControl prism:RegionManager.RegionName="LeftMenuRegion"/>
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
 </Window>
