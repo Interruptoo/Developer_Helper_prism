@@ -4,6 +4,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Image\Icon\DBTable.png" />
+    <None Remove="Image\Icon\gnome-run.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Icon\DBTable.png" />
+    <Resource Include="Image\Icon\gnome-run.ico" />
   </ItemGroup>
 </Project>

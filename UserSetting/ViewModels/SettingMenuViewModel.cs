@@ -1,18 +1,63 @@
-﻿using System;
+﻿using Prism.Mvvm;
+using Prism.Regions;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using UserSetting.Interface;
+using UserSetting.Model;
 
 namespace UserSetting.ViewModels
 {
-    internal class SettingMenuViewModel : UserControl
+    internal class SettingMenuViewModel : BindableBase
     {
-
-        public SettingMenuViewModel() 
-        { 
         
+        #region [Property]
+        protected readonly IRegionManager _regionManager;
+        private protected readonly ISettingMenuModel _settingMenuModel;
+
+        private ObservableCollection<ISettingMenuModel> _menuCollection;
+        /// <summary>
+        /// menuCollection
+        /// </summary>
+        public ObservableCollection<ISettingMenuModel> MenuCollection
+        {
+            get { return _menuCollection; }
+            set { SetProperty(ref _menuCollection, value); }
         }
+
+        #endregion
+
+        #region [Constructor]
+        public SettingMenuViewModel(IRegionManager regionManager)
+        {
+            _regionManager = regionManager;
+
+            init();
+        }
+        #endregion
+
+
+        #region [Command]
+
+        #endregion
+
+
+        #region [Mathod]
+        private void init()
+        {
+
+            MenuCollection =
+            [
+                new SettingMenuModel() { MenuName = "ThmemsView", MenuTitle = "Thmems", MenuDescription = "테마설정", MenuTooltip = "", MenuIcon = "/UserSetting;component/Image/Icon/gnome-run.ico" },
+                new SettingMenuModel() { MenuName = "DBConnectionView", MenuTitle = "DBConnection", MenuDescription = "DB연결", MenuTooltip = "", MenuIcon = "/UserSetting;component/Image/Icon/DBTable.png" }
+            ];
+
+        }
+        #endregion
+
     }
 }

@@ -7,6 +7,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="200">
 
-    
+    <ItemsControl ItemsSource="{Binding MenuCollection}">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <ListBox>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="30" Height="30" Source="{Binding MenuIcon}" />
+                            <TextBlock Text="{Binding MenuTitle}" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
     
 </UserControl>

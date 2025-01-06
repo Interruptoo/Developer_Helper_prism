@@ -2,6 +2,8 @@
 using Prism.Modularity;
 using Prism.Regions;
 using System.Diagnostics;
+using UserSetting.Interface;
+using UserSetting.Model;
 using UserSetting.ViewModels;
 using UserSetting.Views;
 
@@ -18,6 +20,8 @@ namespace UserSetting
         {
             containerRegistry.RegisterForNavigation<UserSettingLayOutView>();
             containerRegistry.RegisterForNavigation<SettingMenuView>();
+
+            containerRegistry.Register<ISettingMenuModel, SettingMenuModel>();
         }
     }
 }
