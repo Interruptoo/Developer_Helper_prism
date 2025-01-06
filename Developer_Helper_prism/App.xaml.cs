@@ -6,6 +6,7 @@ using Prism.Modularity;
 using Prism.Regions;
 using System.Windows;
 using TableInfo;
+using UserSetting;
 
 namespace Developer_Helper_prism
 {
@@ -36,6 +37,7 @@ namespace Developer_Helper_prism
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule<TableInfoModule>();
+            moduleCatalog.AddModule<UserSettingModule>();
         }
     }
 }

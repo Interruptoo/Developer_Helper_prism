@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Developer_Helper_prism", "Developer_Helper_prism.csproj", "{920D2A26-1D19-49DF-8203-26E55FBD682A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Developer_Helper_prism", "Developer_Helper_prism.csproj", "{920D2A26-1D19-49DF-8203-26E55FBD682A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableInfo", "..\TableInfo\TableInfo.csproj", "{2F342664-97A6-482F-8E2C-69F46FEADE48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableInfo", "..\TableInfo\TableInfo.csproj", "{2F342664-97A6-482F-8E2C-69F46FEADE48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "..\CustomControls\CustomControls.csproj", "{78A548AD-684A-4AC2-AB38-357CCD124B2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomControls", "..\CustomControls\CustomControls.csproj", "{78A548AD-684A-4AC2-AB38-357CCD124B2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserSetting", "..\UserSetting\UserSetting.csproj", "{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{78A548AD-684A-4AC2-AB38-357CCD124B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78A548AD-684A-4AC2-AB38-357CCD124B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78A548AD-684A-4AC2-AB38-357CCD124B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -58,7 +58,7 @@ namespace Developer_Helper_prism.ViewModels
                 new MenuModel { MenuName = "SourceGeneratorView", MenuTitle = "SG", MenuTooltip = "SourceGenerator", MenuDescription = "", MenuIcon = "" },
                 new MenuModel { MenuName = "DBSourceView", MenuTitle = "DBSource", MenuTooltip = "DBSource", MenuDescription = "", MenuIcon = "" },
                 new MenuModel { MenuName = "EAMInfoView", MenuTitle = "EAM", MenuTooltip = "EAM", MenuDescription = "", MenuIcon = "" },
-                new MenuModel { MenuName = "SettingView", MenuTitle = "Setting", MenuTooltip = "Setting", MenuDescription = "", MenuIcon = "/Developer_Helper_prism;component/Image/Icon/gnome-run.ico" },
+                new MenuModel { MenuName = "UserSettingLayOutView", MenuTitle = "Setting", MenuTooltip = "Setting", MenuDescription = "", MenuIcon = "/Developer_Helper_prism;component/Image/Icon/gnome-run.ico" },
             ];
         }
 

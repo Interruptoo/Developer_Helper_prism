@@ -200,6 +200,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CustomControls\CustomControls.csproj" />
     <ProjectReference Include="..\TableInfo\TableInfo.csproj" />
+    <ProjectReference Include="..\UserSetting\UserSetting.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\Icon\add.gif" />

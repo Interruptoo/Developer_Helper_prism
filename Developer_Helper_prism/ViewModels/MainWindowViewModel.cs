@@ -34,21 +34,11 @@ namespace Developer_Helper_prism.ViewModels
         public MainWindowViewModel()
         {
             
-
-
-            init();
         }
 
         #endregion
 
         #region [Method]
-        /// <summary>
-        /// 초기화
-        /// </summary>
-        private void init()
-        {
-            
-        }
 
         #endregion
     }
