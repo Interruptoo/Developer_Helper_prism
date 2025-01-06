@@ -52,7 +52,7 @@ namespace UserSetting.ViewModels
 
             MenuCollection =
             [
-                new SettingMenuModel() { MenuName = "ThmemsView", MenuTitle = "Thmems", MenuDescription = "테마설정", MenuTooltip = "", MenuIcon = "/UserSetting;component/Image/Icon/gnome-run.ico" },
+                new SettingMenuModel() { MenuName = "CommonSettingView", MenuTitle = "Common", MenuDescription = "기본환경설정", MenuTooltip = "", MenuIcon = "/UserSetting;component/Image/Icon/gnome-run.ico" },
                 new SettingMenuModel() { MenuName = "DBConnectionView", MenuTitle = "DBConnection", MenuDescription = "DB연결", MenuTooltip = "", MenuIcon = "/UserSetting;component/Image/Icon/DBTable.png" }
             ];
 

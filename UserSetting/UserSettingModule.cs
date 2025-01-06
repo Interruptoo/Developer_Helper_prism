@@ -13,13 +13,17 @@ namespace UserSetting
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            
+            var regionManager = containerProvider.Resolve<RegionManager>();
+
+            regionManager.RegisterViewWithRegion("SettingMenuRegion", nameof(SettingMenuView));;
+            regionManager.RegisterViewWithRegion("SettingContentRegion", nameof(CommonSettingView));;
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<UserSettingLayOutView>();
             containerRegistry.RegisterForNavigation<SettingMenuView>();
+            containerRegistry.RegisterForNavigation<CommonSettingView>();
 
             containerRegistry.Register<ISettingMenuModel, SettingMenuModel>();
         }

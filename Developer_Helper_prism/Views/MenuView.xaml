@@ -10,7 +10,7 @@
     <ItemsControl ItemsSource="{Binding MenuCollection}">
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding MenuName}" ToolTip="{Binding MenuTooltip}">
+                <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding MenuName}" ToolTip="{Binding MenuTooltip}" Width="50" Height="50">
                     <StackPanel>
                         <Image Width="20" Height="20" Source="{Binding MenuIcon}"/>
                         <TextBlock Text="{Binding MenuTitle}"/>

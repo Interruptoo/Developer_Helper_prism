@@ -22,8 +22,6 @@ namespace UserSetting.ViewModels
         {
             _regionManager = regionManager;
 
-            this._regionManager.RegisterViewWithRegion("SettingMenuRegion", nameof(SettingMenuView));
-
             init();
         }
         #endregion
