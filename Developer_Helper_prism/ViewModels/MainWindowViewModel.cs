@@ -1,7 +1,4 @@
-﻿using Developer_Helper_prism.Interface;
-using Developer_Helper_prism.Model;
-using Developer_Helper_prism.Themes;
-using Prism.Commands;
+﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
 using System.Collections.ObjectModel;
