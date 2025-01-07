@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableInfo", "..\TableInfo\T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomControls", "..\CustomControls\CustomControls.csproj", "{78A548AD-684A-4AC2-AB38-357CCD124B2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserSetting", "..\UserSetting\UserSetting.csproj", "{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserSetting", "..\UserSetting\UserSetting.csproj", "{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core.csproj", "{394147B1-E82F-44ED-B522-AAB9C92BA90C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5669B7B7-C071-4CB7-AC0C-8AE1A11A4BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{394147B1-E82F-44ED-B522-AAB9C92BA90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{394147B1-E82F-44ED-B522-AAB9C92BA90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{394147B1-E82F-44ED-B522-AAB9C92BA90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{394147B1-E82F-44ED-B522-AAB9C92BA90C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
