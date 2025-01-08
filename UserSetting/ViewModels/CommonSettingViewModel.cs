@@ -11,7 +11,7 @@ namespace UserSetting.ViewModels
     internal class CommonSettingViewModel : BindableBase
     {
         #region [Property]
-        private string _selectedTheme;
+        private string _selectedTheme = "2";
         public string SelectedTheme
         {
             get { return _selectedTheme; }
