@@ -7,16 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <ItemsControl ItemsSource="{Binding MenuCollection}">
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding MenuName}" ToolTip="{Binding MenuTooltip}" Width="50" Height="50">
-                    <StackPanel>
-                        <Image Width="20" Height="20" Source="{Binding MenuIcon}"/>
-                        <TextBlock Text="{Binding MenuTitle}"/>
-                    </StackPanel>
-                </Button>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-    </ItemsControl>
+    <StackPanel Style="{StaticResource ThemeStackpanel}">
+        <ItemsControl ItemsSource="{Binding MenuCollection}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding MenuName}" ToolTip="{Binding MenuTooltip}" Width="50" Height="50">
+                        <StackPanel>
+                            <Image Width="20" Height="20" Source="{Binding MenuIcon}"/>
+                            <TextBlock Text="{Binding MenuTitle}"/>
+                        </StackPanel>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
 </UserControl>

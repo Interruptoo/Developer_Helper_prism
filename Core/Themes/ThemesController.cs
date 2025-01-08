@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Media;
 
@@ -47,8 +48,8 @@ namespace Core.Themes
             }
 
             CurrentTheme = theme;
-            ThemeDictionary = new ResourceDictionary() { Source = new Uri($"Themes/ColourDictionaries/{themeName}.xaml", UriKind.Relative) };
-            ControlColours = new ResourceDictionary() { Source = new Uri("Themes/ControlColours.xaml", UriKind.Relative) };
+            ThemeDictionary = new ResourceDictionary() { Source = new Uri($"Core;component/Themes/ColourDictionaries/{themeName}.xaml", UriKind.Relative) };
+            ControlColours = new ResourceDictionary() { Source = new Uri("Core;component/Themes/ControlColours.xaml", UriKind.Relative) };
             RefreshControls();
         }
 

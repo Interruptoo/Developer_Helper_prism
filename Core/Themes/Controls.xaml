@@ -5327,11 +5327,11 @@
     </ControlTemplate>
     
     <!--2025-01-08 yuminho 추가-->
-    <Style TargetType="{x:Type StackPanel}">
+    <Style x:Key="ThemeStackpanel" TargetType="{x:Type StackPanel}">
         <Setter Property="Background" Value="{DynamicResource Button.Static.Background}"/>
     </Style>
 
-    <Style TargetType="{x:Type DockPanel}">
+    <Style x:Key="ThemeDockPanel" TargetType="{x:Type DockPanel}">
         <Setter Property="Background" Value="{DynamicResource Button.Static.Background}"/>
     </Style>
 

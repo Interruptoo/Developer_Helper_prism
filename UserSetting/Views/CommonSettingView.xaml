@@ -12,47 +12,47 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel>
+        <StackPanel Style="{StaticResource ThemeStackpanel}">
             <TextBlock Text="Common" VerticalAlignment="Center" FontSize="20" FontWeight="Black" Margin="20,10,0,0"/>
             <Border BorderThickness="1" />
         </StackPanel>
 
 
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1" Style="{StaticResource ThemeStackpanel}">
             <StackPanel>
                 <TextBlock Text="테마" FontSize="15" FontWeight="Black" Margin="20,0,0,0"/>
-                <ComboBox Width="200" HorizontalAlignment="Left" Margin="20,10,0,0">
-                    <ComboBoxItem >
+                <ComboBox Width="200" HorizontalAlignment="Left" Margin="20,10,0,0" SelectedValue="{Binding SelectedTheme}" SelectedValuePath="Tag">
+                    <ComboBoxItem Tag="0">
                         <StackPanel Orientation="Horizontal">
                             <Rectangle Stroke="#FF232323" Fill="#FF1B1B1B" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
                             <TextBlock Text="Deep Dark" Margin="5,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem >
+                    <ComboBoxItem Tag="1">
                         <StackPanel Orientation="Horizontal">
                             <Rectangle Stroke="#FF404040" Fill="#FF2A2A2A" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
                             <TextBlock Text="Soft Dark" Margin="5,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem >
+                    <ComboBoxItem Tag="2">
                         <StackPanel Orientation="Horizontal">
                             <Rectangle Stroke="#FF737373" Fill="#FF4E4E4E" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
                             <TextBlock Text="Dark Grey" Margin="5,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem >
+                    <ComboBoxItem Tag="3">
                         <StackPanel Orientation="Horizontal">
                             <Rectangle Stroke="#FFB3B3B3" Fill="#FF797979" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
                             <TextBlock Text="Grey" Margin="5,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem >
+                    <ComboBoxItem Tag="4">
                         <StackPanel Orientation="Horizontal">
                             <Rectangle Stroke="#FF848484" Fill="#FFE8E8E8" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
                             <TextBlock Text="Light" Margin="5,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ComboBoxItem>
-                    <ComboBoxItem >
+                    <ComboBoxItem Tag="5">
                         <StackPanel Orientation="Horizontal">
                             <Rectangle Stroke="#FFFF1A1A" Fill="#FFED1C1C" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
                             <TextBlock Text="Red" Margin="5,0,0,0" VerticalAlignment="Center"/>

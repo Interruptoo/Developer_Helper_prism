@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:uc="clr-namespace:Core.CustomControls;assembly=Core"
+             xmlns:th="clr-namespace:Core.Themes;assembly=Core"
              xmlns:local="clr-namespace:TableInfo.Views"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1200">
@@ -27,7 +28,7 @@
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Style="{StaticResource ThemeStackpanel}">
             <!--<TextBox Height="20" Margin="5,0,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>-->
             <uc:DHTextBox x:Name="txtKeyword" Height="20" MinWidth="160" Margin="5,1,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" VerticalContentAlignment="Center" />
             <ComboBox x:Name="cboAndOr" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="55" Height="20" Margin="0,1,0,0" SelectedIndex="0" SelectedValuePath="Content">
@@ -50,7 +51,7 @@
             </CheckBox>
         </StackPanel>
         
-        <StackPanel Grid.Column="2" Orientation="Horizontal">
+        <StackPanel Grid.Column="2" Orientation="Horizontal" Style="{StaticResource ThemeStackpanel}">
             <!--<TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>-->
             <uc:DHTextBox x:Name="txtKeywordCol" Height="20" MinWidth="160" Margin="5,1,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />
             
@@ -59,7 +60,7 @@
                 <ComboBoxItem Content="OR"/>
             </ComboBox>
         </StackPanel>
-        <DockPanel Grid.Column="4" LastChildFill="False">
+        <DockPanel Grid.Column="4" LastChildFill="False" Style="{StaticResource ThemeDockPanel}">
             <!--<TextBox Height="20" Margin="5,1,0,0" MinWidth="160" VerticalContentAlignment="Center" Tag="키워드1, 키워드2" Style="{StaticResource HintedTextBox}"/>-->
             <uc:DHTextBox x:Name="txtKeywordObj" Height="20" MinWidth="160" Margin="5,1,0,0" ClearButtonVisibility="Visible" Watermark="키워드1, 키워드2" />
             <ComboBox x:Name="cboAndOrObj" Grid.Column="1" HorizontalAlignment="Left" Margin="0,1,0,0"  Width="55" Height="20" VerticalAlignment="Center" SelectedIndex="0" SelectedValuePath="Content">
