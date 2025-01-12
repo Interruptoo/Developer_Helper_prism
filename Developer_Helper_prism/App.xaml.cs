@@ -25,13 +25,14 @@ namespace Developer_Helper_prism
             base.OnInitialized();
 
             var regionManager = Container.Resolve<IRegionManager>();
-            //regionManager.RequestNavigate("ContentRegion", "TableInfoView");
+            regionManager.RequestNavigate("ContentRegion", "HomeView");
             regionManager.RequestNavigate("LeftMenuRegion", "MenuView");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<MenuView>();
+            containerRegistry.RegisterForNavigation<HomeView>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

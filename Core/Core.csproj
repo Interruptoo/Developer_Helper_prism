@@ -111,6 +111,7 @@
     <None Remove="Image\Icon\graph.gif" />
     <None Remove="Image\Icon\heart.gif" />
     <None Remove="Image\Icon\home.gif" />
+    <None Remove="Image\Icon\Home_icon.png" />
     <None Remove="Image\Icon\html.gif" />
     <None Remove="Image\Icon\icon_user.gif" />
     <None Remove="Image\Icon\icon_wand.gif" />
@@ -300,6 +301,7 @@
     <Resource Include="Image\Icon\graph.gif" />
     <Resource Include="Image\Icon\heart.gif" />
     <Resource Include="Image\Icon\home.gif" />
+    <Resource Include="Image\Icon\Home_icon.png" />
     <Resource Include="Image\Icon\html.gif" />
     <Resource Include="Image\Icon\icon_user.gif" />
     <Resource Include="Image\Icon\icon_wand.gif" />

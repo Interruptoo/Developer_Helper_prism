@@ -53,6 +53,7 @@ namespace Developer_Helper_prism.ViewModels
 
             MenuCollection =
             [
+                new MenuModel { MenuName = "HomeView", MenuTitle = "Home", MenuTooltip = "Home", MenuDescription = "", MenuIcon = "/Core;component/Image/Icon/Home_icon.png" },
                 new MenuModel { MenuName = "TableInfoView", MenuTitle = "Table", MenuTooltip = "Table", MenuDescription = "", MenuIcon = "/Core;component/Image/Icon/DBTable.png" },
                 new MenuModel { MenuName = "SQLExcuteView", MenuTitle = "SQL", MenuTooltip = "SQL", MenuDescription = "", MenuIcon = "" },
                 new MenuModel { MenuName = "SourceGeneratorView", MenuTitle = "SG", MenuTooltip = "SourceGenerator", MenuDescription = "", MenuIcon = "" },
