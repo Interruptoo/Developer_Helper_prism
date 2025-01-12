@@ -1,4 +1,5 @@
-﻿using Prism.Mvvm;
+﻿using Markdig.Wpf;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,6 +27,8 @@ namespace Developer_Helper_prism.ViewModels
             try
             {
                 MarkdownContent = File.ReadAllText("README.md");
+
+
             }
             catch(Exception ex)
             {

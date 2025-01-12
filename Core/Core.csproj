@@ -198,6 +198,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Markdig.Wpf" Version="0.5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Image\Icon\add.gif" />
     <Resource Include="Image\Icon\add.png" />
     <Resource Include="Image\Icon\addressbook.gif" />
