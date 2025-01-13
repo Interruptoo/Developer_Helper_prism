@@ -8,8 +8,8 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              mc:Ignorable="d">
-    <StackPanel Style="{StaticResource ThemeStackpanel}">
-
+    <StackPanel Background="Gray">
         <markdig:MarkdownViewer x:Name="MarkdownViewer" Markdown="{Binding MarkdownContent}" />
     </StackPanel>
+
 </UserControl>

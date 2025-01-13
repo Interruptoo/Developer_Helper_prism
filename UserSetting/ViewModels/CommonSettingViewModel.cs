@@ -1,4 +1,5 @@
 ﻿using Core.Themes;
+using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using UserSetting.Class;
 using UserSetting.Model;
 
 namespace UserSetting.ViewModels
@@ -29,6 +31,8 @@ namespace UserSetting.ViewModels
             get { return this._userSettingList; }
             set { SetProperty(ref  this._userSettingList, value); }
         }
+
+        private UserSettingConfigManager _configManager;
         #endregion
 
         #region [Constructor]
@@ -39,12 +43,16 @@ namespace UserSetting.ViewModels
         #endregion
 
         #region [Command]
-
+        public DelegateCommand UserSettingSaveCommand { get; private set; }
         #endregion
 
         #region [Method]
         private void init()
         {
+            _configManager = new UserSettingConfigManager();
+
+            UserSettingSaveCommand = new DelegateCommand(UserSettingSave);
+
             UserSettingList =
                 [
                     new UserSettingModel {Code = "UserName", Property = "사용자이름", Value = "", Remark = "작업자" },
@@ -61,6 +69,9 @@ namespace UserSetting.ViewModels
                 ];
         }
 
+        /// <summary>
+        /// 테마변경
+        /// </summary>
         private void ChangeTheme()
         {
             switch (SelectedTheme)
@@ -84,6 +95,11 @@ namespace UserSetting.ViewModels
                     ThemesController.SetTheme(ThemeType.RedBlackTheme);
                     break;
             }
+        }
+
+        private void UserSettingSave()
+        {
+            _configManager.SaveConfig(UserSettingList.ToList());
         }
         #endregion
 

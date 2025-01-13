@@ -391,4 +391,8 @@
     <Resource Include="Image\Icon\zoomout.gif" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Class\" />
+  </ItemGroup>
+
 </Project>

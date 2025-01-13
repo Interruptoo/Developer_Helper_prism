@@ -7436,6 +7436,6 @@
     </Style>
 
     <Style TargetType="{x:Type markdig:MarkdownViewer}">
-        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}" />
+        <!--<Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}" />-->
     </Style>
 </ResourceDictionary>

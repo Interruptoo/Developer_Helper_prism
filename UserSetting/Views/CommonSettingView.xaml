@@ -121,13 +121,36 @@
         </StackPanel>
 
         <StackPanel Margin="20,20,0,0">
-            <StackPanel Orientation="Horizontal">
+            <DockPanel LastChildFill="False">
                 <Border BorderBrush="#0274ad" BorderThickness="5,0,0,0" />
                 <TextBlock Margin="5,0,0,0"
                            FontSize="15"
                            FontWeight="Black"
                            Text="사용자정보" />
-            </StackPanel>
+                <Button Grid.Column="2"
+                        Width="52"
+                        Height="21"
+                        Margin="5,0,5,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Command="{Binding Path=UserSettingSaveCommand}"
+                        DockPanel.Dock="Right">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="14"
+                               Height="14"
+                               Margin="0,0,0,0"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top"
+                               Source="/Core;component/Image/Icon/document-save16.png" />
+                        <TextBlock Margin="5,0,5,0"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="11"
+                                   Text="저장"
+                                   TextWrapping="WrapWithOverflow" />
+                    </StackPanel>
+                </Button>
+            </DockPanel>
 
             <DataGrid Margin="0,5,5,0"
                       HorizontalAlignment="Stretch"
