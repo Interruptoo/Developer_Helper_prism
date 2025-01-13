@@ -1,80 +1,162 @@
 ﻿<UserControl x:Class="UserSetting.Views.CommonSettingView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:UserSetting.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
     <StackPanel Style="{StaticResource ThemeStackpanel}">
         <StackPanel Margin="20,10,0,0">
-            <TextBlock Text="Common" VerticalAlignment="Center" FontSize="20" FontWeight="Black" />
-            <Border BorderThickness="2" BorderBrush="Beige" Width="700" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+            <TextBlock VerticalAlignment="Center"
+                       FontSize="20"
+                       FontWeight="Black"
+                       Text="Common" />
+            <Border Width="700"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    BorderBrush="Beige"
+                    BorderThickness="2" />
         </StackPanel>
 
 
         <StackPanel Margin="20,20,0,0">
             <StackPanel Orientation="Horizontal">
-                <Border BorderThickness="5,0,0,0" BorderBrush="#0274ad"/>
-                <TextBlock Text="테마" FontSize="15" FontWeight="Black" Margin="5,0,0,0"/>
+                <Border BorderBrush="#0274ad" BorderThickness="5,0,0,0" />
+                <TextBlock Margin="5,0,0,0"
+                           FontSize="15"
+                           FontWeight="Black"
+                           Text="테마" />
             </StackPanel>
-            <ComboBox Width="200" HorizontalAlignment="Left" Margin="20,10,0,0" SelectedValue="{Binding SelectedTheme}" SelectedValuePath="Tag">
+            <ComboBox Width="200"
+                      Margin="20,10,0,0"
+                      HorizontalAlignment="Left"
+                      SelectedValue="{Binding SelectedTheme}"
+                      SelectedValuePath="Tag">
                 <ComboBoxItem Tag="0">
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Stroke="#FF232323" Fill="#FF1B1B1B" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
-                        <TextBlock Text="Deep Dark" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        <Rectangle Width="20"
+                                   Height="20"
+                                   Fill="#FF1B1B1B"
+                                   Stroke="#FF232323"
+                                   StrokeLineJoin="Round"
+                                   StrokeThickness="2" />
+                        <TextBlock Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="Deep Dark" />
                     </StackPanel>
                 </ComboBoxItem>
                 <ComboBoxItem Tag="1">
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Stroke="#FF404040" Fill="#FF2A2A2A" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
-                        <TextBlock Text="Soft Dark" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        <Rectangle Width="20"
+                                   Height="20"
+                                   Fill="#FF2A2A2A"
+                                   Stroke="#FF404040"
+                                   StrokeLineJoin="Round"
+                                   StrokeThickness="2" />
+                        <TextBlock Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="Soft Dark" />
                     </StackPanel>
                 </ComboBoxItem>
                 <ComboBoxItem Tag="2">
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Stroke="#FF737373" Fill="#FF4E4E4E" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
-                        <TextBlock Text="Dark Grey" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        <Rectangle Width="20"
+                                   Height="20"
+                                   Fill="#FF4E4E4E"
+                                   Stroke="#FF737373"
+                                   StrokeLineJoin="Round"
+                                   StrokeThickness="2" />
+                        <TextBlock Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="Dark Grey" />
                     </StackPanel>
                 </ComboBoxItem>
                 <ComboBoxItem Tag="3">
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Stroke="#FFB3B3B3" Fill="#FF797979" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
-                        <TextBlock Text="Grey" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        <Rectangle Width="20"
+                                   Height="20"
+                                   Fill="#FF797979"
+                                   Stroke="#FFB3B3B3"
+                                   StrokeLineJoin="Round"
+                                   StrokeThickness="2" />
+                        <TextBlock Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="Grey" />
                     </StackPanel>
                 </ComboBoxItem>
                 <ComboBoxItem Tag="4">
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Stroke="#FF848484" Fill="#FFE8E8E8" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
-                        <TextBlock Text="Light" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        <Rectangle Width="20"
+                                   Height="20"
+                                   Fill="#FFE8E8E8"
+                                   Stroke="#FF848484"
+                                   StrokeLineJoin="Round"
+                                   StrokeThickness="2" />
+                        <TextBlock Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="Light" />
                     </StackPanel>
                 </ComboBoxItem>
                 <ComboBoxItem Tag="5">
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Stroke="#FFFF1A1A" Fill="#FFED1C1C" StrokeThickness="2" StrokeLineJoin="Round" Width="20" Height="20"/>
-                        <TextBlock Text="Red" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        <Rectangle Width="20"
+                                   Height="20"
+                                   Fill="#FFED1C1C"
+                                   Stroke="#FFFF1A1A"
+                                   StrokeLineJoin="Round"
+                                   StrokeThickness="2" />
+                        <TextBlock Margin="5,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Text="Red" />
                     </StackPanel>
                 </ComboBoxItem>
             </ComboBox>
-            <Border BorderThickness="1" BorderBrush="Beige" Width="700" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+            <Border Width="700"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    BorderBrush="Beige"
+                    BorderThickness="1" />
         </StackPanel>
 
         <StackPanel Margin="20,20,0,0">
             <StackPanel Orientation="Horizontal">
-                <Border BorderThickness="5,0,0,0" BorderBrush="#0274ad"/>
-                <TextBlock Text="사용자정보" FontSize="15" FontWeight="Black" Margin="5,0,0,0"/>
+                <Border BorderBrush="#0274ad" BorderThickness="5,0,0,0" />
+                <TextBlock Margin="5,0,0,0"
+                           FontSize="15"
+                           FontWeight="Black"
+                           Text="사용자정보" />
             </StackPanel>
 
-            <DataGrid Margin="0,5,5,0" ItemsSource="{Binding UserSettingList}" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                      AllowDrop="True" CanUserAddRows="False" FontSize="14">
+            <DataGrid Margin="0,5,5,0"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      AllowDrop="True"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      FontSize="14"
+                      ItemsSource="{Binding UserSettingList}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Property" Width="0.2*" IsReadOnly="True" Binding="{Binding Property}"/>
-                    <DataGridTextColumn Header="Value" Width="*" Binding="{Binding Value}"/>
-                    <DataGridTextColumn Header="Remark" Width="0.3*" IsReadOnly="True" Binding="{Binding Remark}"/>
+                    <DataGridTextColumn Width="0.2*"
+                                        Binding="{Binding Property}"
+                                        Header="Property"
+                                        IsReadOnly="True" />
+                    <DataGridTextColumn Width="*"
+                                        Binding="{Binding Value}"
+                                        Header="Value" />
+                    <DataGridTextColumn Width="0.3*"
+                                        Binding="{Binding Remark}"
+                                        Header="Remark"
+                                        IsReadOnly="True" />
                 </DataGrid.Columns>
             </DataGrid>
-            
-            <Border BorderThickness="1" BorderBrush="Beige" Width="700" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+            <Border Width="700"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    BorderBrush="Beige"
+                    BorderThickness="1" />
         </StackPanel>
     </StackPanel>
 </UserControl>

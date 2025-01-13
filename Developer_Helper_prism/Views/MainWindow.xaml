@@ -3,30 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:prism="http://prismlibrary.com/"
+        Title="{Binding Title}"
+        Width="1250"
+        Height="700"
+        MinWidth="500"
+        MinHeight="250"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        WindowState="Maximized"
-        Title="{Binding Title}" Height="700" Width="1250" MinHeight="250" MinWidth="500" >
+        WindowState="Maximized">
 
     <Window.Resources>
-        <ResourceDictionary>
-
-        </ResourceDictionary>
+        <ResourceDictionary />
     </Window.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="5" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <!--<Border Grid.ColumnSpan="2" BorderBrush="CadetBlue" BorderThickness="5"/>-->
-        <StackPanel Grid.ColumnSpan="2"/>
+        <StackPanel Grid.ColumnSpan="2" />
 
-        <ContentControl Grid.Row="1" prism:RegionManager.RegionName="LeftMenuRegion"/>
-        <ContentControl Grid.Row="1" Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
+        <ContentControl Grid.Row="1" prism:RegionManager.RegionName="LeftMenuRegion" />
+        <ContentControl Grid.Row="1"
+                        Grid.Column="1"
+                        prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
 </Window>
