@@ -16,5 +16,12 @@ namespace Core.Class
             config.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("appSettings");
         }
+
+        public static string LoadConfig(string key)
+        {
+            var config = ConfigurationManager.AppSettings["ThemeName"] ?? string.Empty;
+
+            return config;
+        }
     }
 }

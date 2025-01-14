@@ -1,4 +1,5 @@
-﻿using Core.Themes;
+﻿using Core.Class;
+using Core.Themes;
 using Developer_Helper_prism.Interface;
 using Developer_Helper_prism.Model;
 using Developer_Helper_prism.Views;
@@ -31,14 +32,11 @@ namespace Developer_Helper_prism
             regionManager.RequestNavigate("ContentRegion", "HomeView");
             regionManager.RequestNavigate("LeftMenuRegion", "MenuView");
 
-
             var ThemeName = ConfigurationManager.AppSettings["ThemeName"] ?? "DarkGrey";
 
             var Theme = new CommonSettingViewModel();
 
             Theme.ChangeTheme(ThemeName);
-
-
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

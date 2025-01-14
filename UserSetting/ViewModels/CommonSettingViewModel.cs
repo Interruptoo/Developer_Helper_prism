@@ -1,4 +1,5 @@
-﻿using Core.Themes;
+﻿using Core.Class;
+using Core.Themes;
 using Prism.Commands;
 using Prism.Mvvm;
 using System;
@@ -17,14 +18,14 @@ namespace UserSetting.ViewModels
     public class CommonSettingViewModel : BindableBase
     {
         #region [Property]
-        private string _selectedTheme = "DarkGrey";
+        private string _selectedTheme;
         public string SelectedTheme
         {
             get { return _selectedTheme; }
             set
             {
                 SetProperty(ref _selectedTheme, value);
-                ChangeTheme(SelectedTheme);
+                SelectTheme(SelectedTheme);
             }
         }
 
@@ -37,11 +38,13 @@ namespace UserSetting.ViewModels
         }
 
         private UserSettingConfigManager _configManager;
+        private string themeNamet;
         #endregion
 
         #region [Constructor]
-        public CommonSettingViewModel() 
+        public CommonSettingViewModel()
         {
+            
             init();
         }
         #endregion
@@ -71,14 +74,31 @@ namespace UserSetting.ViewModels
                     new UserSettingModel {Code = "TFSUserID", Property = "TFS User", Value = "", Remark = "TFS 사용자" },
                     new UserSettingModel {Code = "TFSPassword", Property = "TFS Password", Value = "", Remark = "TFS 비밀번호" },
                 ];
+
+            SelectedTheme = ConfigHelper.LoadConfig("ThemeName");
+        }
+
+        private void SelectTheme(string themeName)
+        {
+            ChangeTheme(themeName);
+
+            SaveThemeConfig(themeName);
+        }
+
+        /// <summary>
+        /// 테마값 Config 저장
+        /// </summary>
+        private void SaveThemeConfig(string p)
+        {
+            ConfigHelper.SaveConfig("ThemeName", p);
         }
 
         /// <summary>
         /// 테마변경
         /// </summary>
-        public void ChangeTheme(string themeName)
+        public void ChangeTheme(string p)
         {
-            switch (themeName)
+            switch (p)
             {
                 case "DeepDark":
                     ThemesController.SetTheme(ThemeType.DeepDark);
