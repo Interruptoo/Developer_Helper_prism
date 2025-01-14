@@ -26,9 +26,12 @@ namespace Core.Themes
         {
             // This seems to be faster than reloading the whole file, and it also seems to work
             Collection<ResourceDictionary> merged = Application.Current.Resources.MergedDictionaries;
-            ResourceDictionary dictionary = merged[2];
-            merged.RemoveAt(2);
-            merged.Insert(2, dictionary);
+            //ResourceDictionary dictionary = merged[2];
+            //merged.RemoveAt(2);
+            //merged.Insert(2, dictionary);
+            ResourceDictionary dictionary = merged.LastOrDefault();
+            merged.Remove(dictionary);
+            merged.Add(dictionary);
 
             // If the above doesn't work then fall back to this
             // Application.Current.Resources.MergedDictionaries[2] = new ResourceDictionary() { Source = new Uri("Themes/Controls.xaml", UriKind.Relative) };

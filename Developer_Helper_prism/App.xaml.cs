@@ -1,12 +1,15 @@
-﻿using Developer_Helper_prism.Interface;
+﻿using Core.Themes;
+using Developer_Helper_prism.Interface;
 using Developer_Helper_prism.Model;
 using Developer_Helper_prism.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
+using System.Configuration;
 using System.Windows;
 using TableInfo;
 using UserSetting;
+using UserSetting.ViewModels;
 
 namespace Developer_Helper_prism
 {
@@ -27,6 +30,15 @@ namespace Developer_Helper_prism
             var regionManager = Container.Resolve<IRegionManager>();
             regionManager.RequestNavigate("ContentRegion", "HomeView");
             regionManager.RequestNavigate("LeftMenuRegion", "MenuView");
+
+
+            var ThemeName = ConfigurationManager.AppSettings["ThemeName"] ?? "DarkGrey";
+
+            var Theme = new CommonSettingViewModel();
+
+            Theme.ChangeTheme(ThemeName);
+
+
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

@@ -8,7 +8,7 @@ using UserSetting.Interface;
 
 namespace UserSetting.Model
 {
-    internal class UserSettingModel : BindableBase, IUserSettingModel
+    public class UserSettingModel : BindableBase, IUserSettingModel
     {
         public string Code { get; set; }
         public string Property {  get; set; }

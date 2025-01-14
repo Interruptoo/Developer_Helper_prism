@@ -6,7 +6,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Core;component/Themes/ColourDictionaries/DarkGreyTheme.xaml" />
+                <!--<ResourceDictionary Source="/Core;component/Themes/ColourDictionaries/DarkGreyTheme.xaml" />-->
+                <ResourceDictionary />
                 <ResourceDictionary Source="/Core;component/Themes/ControlColours.xaml" />
                 <ResourceDictionary Source="/Core;component/Themes/Controls.xaml" />
             </ResourceDictionary.MergedDictionaries>

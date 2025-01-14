@@ -34,7 +34,7 @@
                       HorizontalAlignment="Left"
                       SelectedValue="{Binding SelectedTheme}"
                       SelectedValuePath="Tag">
-                <ComboBoxItem Tag="0">
+                <ComboBoxItem Tag="DeepDark">
                     <StackPanel Orientation="Horizontal">
                         <Rectangle Width="20"
                                    Height="20"
@@ -47,7 +47,7 @@
                                    Text="Deep Dark" />
                     </StackPanel>
                 </ComboBoxItem>
-                <ComboBoxItem Tag="1">
+                <ComboBoxItem Tag="SoftDark">
                     <StackPanel Orientation="Horizontal">
                         <Rectangle Width="20"
                                    Height="20"
@@ -60,7 +60,7 @@
                                    Text="Soft Dark" />
                     </StackPanel>
                 </ComboBoxItem>
-                <ComboBoxItem Tag="2">
+                <ComboBoxItem Tag="DarkGrey">
                     <StackPanel Orientation="Horizontal">
                         <Rectangle Width="20"
                                    Height="20"
@@ -73,7 +73,7 @@
                                    Text="Dark Grey" />
                     </StackPanel>
                 </ComboBoxItem>
-                <ComboBoxItem Tag="3">
+                <ComboBoxItem Tag="Grey">
                     <StackPanel Orientation="Horizontal">
                         <Rectangle Width="20"
                                    Height="20"
@@ -86,7 +86,7 @@
                                    Text="Grey" />
                     </StackPanel>
                 </ComboBoxItem>
-                <ComboBoxItem Tag="4">
+                <ComboBoxItem Tag="Light">
                     <StackPanel Orientation="Horizontal">
                         <Rectangle Width="20"
                                    Height="20"
@@ -99,7 +99,7 @@
                                    Text="Light" />
                     </StackPanel>
                 </ComboBoxItem>
-                <ComboBoxItem Tag="5">
+                <ComboBoxItem Tag="RedBlack">
                     <StackPanel Orientation="Horizontal">
                         <Rectangle Width="20"
                                    Height="20"

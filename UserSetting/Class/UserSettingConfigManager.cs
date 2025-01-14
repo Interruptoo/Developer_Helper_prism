@@ -7,12 +7,21 @@ using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Unicode;
 using System.Threading.Tasks;
+using System.Windows;
 using UserSetting.Model;
+
+
 
 namespace UserSetting.Class
 {
-    internal class UserSettingConfigManager
+    public class UserSettingConfigManager
     {
+
+        //private static readonly string ConfigPath = Path.Combine(
+        //    Directory.GetParent(AppContext.BaseDirectory)?.Parent?.Parent?.Parent?.FullName
+        //    , "Config"
+        //    , "UserSettingConfig.json"
+        //    );
         private static readonly string ConfigPath = Path.Combine(
             Directory.GetCurrentDirectory(), "Config", "UserSettingConfig.json"
         );
@@ -36,8 +45,19 @@ namespace UserSetting.Class
                 WriteIndented = true,
             };
 
-            var json = JsonSerializer.Serialize(config, options);
-            File.WriteAllText(ConfigPath, json, Encoding.Default);
+
+            try
+            {
+                var json = JsonSerializer.Serialize(config, options);
+                File.WriteAllText(ConfigPath, json, Encoding.Default);
+
+                MessageBox.Show("저장완료", "사용자정보 저장", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "사용자정보 저장", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+            }
+
         }
     }
 }

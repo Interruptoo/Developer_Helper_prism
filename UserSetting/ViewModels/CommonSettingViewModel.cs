@@ -10,20 +10,24 @@ using System.Text;
 using System.Threading.Tasks;
 using UserSetting.Class;
 using UserSetting.Model;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace UserSetting.ViewModels
 {
-    internal class CommonSettingViewModel : BindableBase
+    public class CommonSettingViewModel : BindableBase
     {
         #region [Property]
-        private string _selectedTheme = "2";
+        private string _selectedTheme = "DarkGrey";
         public string SelectedTheme
         {
             get { return _selectedTheme; }
-            set { SetProperty(ref _selectedTheme, value);
-                ChangeTheme();
+            set
+            {
+                SetProperty(ref _selectedTheme, value);
+                ChangeTheme(SelectedTheme);
             }
         }
+
 
         private ObservableCollection<UserSettingModel> _userSettingList;
         public ObservableCollection<UserSettingModel> UserSettingList
@@ -72,26 +76,26 @@ namespace UserSetting.ViewModels
         /// <summary>
         /// 테마변경
         /// </summary>
-        private void ChangeTheme()
+        public void ChangeTheme(string themeName)
         {
-            switch (SelectedTheme)
+            switch (themeName)
             {
-                case "0":
+                case "DeepDark":
                     ThemesController.SetTheme(ThemeType.DeepDark);
                     break;
-                case "1":
+                case "SoftDark":
                     ThemesController.SetTheme(ThemeType.SoftDark);
                     break;
-                case "2":
+                case "DarkGrey":
                     ThemesController.SetTheme(ThemeType.DarkGreyTheme);
                     break;
-                case "3":
+                case "Grey":
                     ThemesController.SetTheme(ThemeType.GreyTheme);
                     break;
-                case "4":
+                case "Light":
                     ThemesController.SetTheme(ThemeType.LightTheme);
                     break;
-                case "5":
+                case "RedBlack":
                     ThemesController.SetTheme(ThemeType.RedBlackTheme);
                     break;
             }

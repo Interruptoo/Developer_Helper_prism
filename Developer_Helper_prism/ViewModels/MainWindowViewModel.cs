@@ -30,7 +30,7 @@ namespace Developer_Helper_prism.ViewModels
         #region [Constructor]
         public MainWindowViewModel()
         {
-            
+
         }
 
         #endregion

@@ -10,6 +10,8 @@ namespace Developer_Helper_prism.Views
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
     }
 }
