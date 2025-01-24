@@ -8,8 +8,8 @@
              d:DesignWidth="800"
              mc:Ignorable="d">
 
-    <StackPanel Style="{StaticResource ThemeStackpanel}">
-        <ItemsControl ItemsSource="{Binding MenuCollection}">
+    <DockPanel LastChildFill="False" Style="{StaticResource ThemeDockPanel}">
+        <ItemsControl DockPanel.Dock="Top" ItemsSource="{Binding MenuCollection}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Button Width="50"
@@ -27,5 +27,9 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-    </StackPanel>
+
+        <ComboBox DockPanel.Dock="Bottom">
+            <ComboBoxItem Content="XSUP" />
+        </ComboBox>
+    </DockPanel>
 </UserControl>
