@@ -1,12 +1,187 @@
 ﻿<UserControl x:Class="CommonCodeInfo.Views.SearchCommonCodeView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:CommonCodeInfo.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:th="clr-namespace:Core.Themes;assembly=Core"
+             xmlns:uc="clr-namespace:Core.CustomControls;assembly=Core"
+             d:DesignHeight="700"
+             d:DesignWidth="1200"
+             mc:Ignorable="d">
+
+    <DockPanel Style="{StaticResource ThemeDockPanel}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <DockPanel>
+                <uc:DHTextBox x:Name="txtKeyword"
+                              Width="Auto"
+                              Height="20"
+                              MinWidth="160"
+                              Margin="5,1,5,0"
+                              HorizontalAlignment="Left"
+                              VerticalContentAlignment="Center"
+                              ClearButtonVisibility="Visible"
+                              DockPanel.Dock="Top"
+                              Watermark="키워드1||키워드2" />
+
+                <DataGrid MaxHeight="1500"
+                          Margin="3"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch"
+                          AllowDrop="True"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          EnableColumnVirtualization="True"
+                          EnableRowVirtualization="True"
+                          HorizontalGridLinesBrush="#FFD5D5D5"
+                          ScrollViewer.CanContentScroll="True"
+                          VerticalGridLinesBrush="#FFD5D5D5"
+                          VirtualizingPanel.IsVirtualizing="True"
+                          VirtualizingPanel.IsVirtualizingWhenGrouping="True"
+                          VirtualizingPanel.ScrollUnit="Pixel"
+                          VirtualizingPanel.VirtualizationMode="Standard">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="64"
+                                            Binding="{Binding TABLE_NM}"
+                                            Header="TABLE" />
+                        <DataGridTextColumn Width="90"
+                                            Binding="{Binding COMN_GRP_CD}"
+                                            Header="COMN_GRP_CD" />
+                        <DataGridTextColumn Width="200"
+                                            Binding="{Binding COMN_GRP_CD_NM}"
+                                            Header="COMN_GRP_CD_NM" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding TEAM_TP_CD}"
+                                            Header="TEAM_TP_CD" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding SBAR_NM}"
+                                            Header="SBAR_NM" />
+
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL1_EXPL}"
+                                            Header="DTRL1_EXPL" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL2_EXPL}"
+                                            Header="DTRL2_EXPL" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL3_EXPL}"
+                                            Header="DTRL3_EXPL" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL4_EXPL}"
+                                            Header="DTRL4_EXPL" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL5_EXPL}"
+                                            Header="DTRL5_EXPL" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL6_EXPL}"
+                                            Header="DTRL6_EXPL" />
+                        <!--<DataGridTextColumn Binding="{Binding QUERYTEXT}" Header="QUERYTEXT" Width="*"  />-->
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+
+            <GridSplitter Grid.Column="1"
+                          Width="5"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Stretch" />
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <uc:DHTextBox Height="20"
+                              MinWidth="160"
+                              Margin="5,1,5,0"
+                              HorizontalAlignment="Left"
+                              VerticalContentAlignment="Center"
+                              ClearButtonVisibility="Visible"
+                              Watermark="키워드1||키워드2" />
+                <DataGrid Grid.Row="1"
+                          Margin="3"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch"
+                          AllowDrop="True"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          EnableColumnVirtualization="True"
+                          EnableRowVirtualization="True"
+                          HorizontalGridLinesBrush="#FFD5D5D5"
+                          ScrollViewer.CanContentScroll="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="80"
+                                            Binding="{Binding COMN_CD}"
+                                            Header="COMN_CD" />
+                        <DataGridTextColumn Width="200"
+                                            Binding="{Binding COMN_CD_NM}"
+                                            Header="COMN_CD_NM" />
+                        <DataGridTextColumn Width="200"
+                                            Binding="{Binding COMN_CD_EXPL}"
+                                            Header="COMN_CD_EXPL" />
+                        <DataGridTextColumn Width="50"
+                                            Binding="{Binding SCRN_MRK_SEQ}"
+                                            Header="SORT" />
+                        <DataGridTextColumn Width="50"
+                                            Binding="{Binding USE_YN}"
+                                            Header="USE_YN" />
+
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL1_NM}"
+                                            Header="DTRL1_NM" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL2_NM}"
+                                            Header="DTRL2_NM" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL3_NM}"
+                                            Header="DTRL3_NM" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL4_NM}"
+                                            Header="DTRL4_NM" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL5_NM}"
+                                            Header="DTRL5_NM" />
+                        <DataGridTextColumn Width="120"
+                                            Binding="{Binding DTRL6_NM}"
+                                            Header="DTRL6_NM" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <!--  VerticalGridLinesBrush="#FFD5D5D5"  -->
+                <!--
+                    VirtualizingPanel.IsVirtualizing="True"
+                    VirtualizingPanel.IsVirtualizingWhenGrouping="True"
+                    VirtualizingPanel.ScrollUnit="Pixel"
+                    VirtualizingPanel.VirtualizationMode="Standard"
+                -->
+
+                <GridSplitter Grid.Row="2"
+                              Width="Auto"
+                              Height="5"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Center" />
+
+                <DataGrid Grid.Row="3"
+                          Margin="3"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch"
+                          AllowDrop="True"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          EnableColumnVirtualization="True"
+                          EnableRowVirtualization="True"
+                          HorizontalGridLinesBrush="#FFD5D5D5"
+                          ScrollViewer.CanContentScroll="True" />
+            </Grid>
+        </Grid>
+    </DockPanel>
+
+
 </UserControl>
