@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CommonCodeInfo.Views
 {
     /// <summary>
-    /// Interaction logic for ViewA.xaml
+    /// SearchCommonCodeView.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class ViewA : UserControl
+    public partial class SearchCommonCodeView : UserControl
     {
-        public ViewA()
+        public SearchCommonCodeView()
         {
             InitializeComponent();
         }
