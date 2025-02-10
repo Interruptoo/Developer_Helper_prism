@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Developer_Helper_prism.ViewModels
 {
@@ -26,8 +27,8 @@ namespace Developer_Helper_prism.ViewModels
         {
             try
             {
-                MarkdownContent = File.ReadAllText("README.md");
-
+                //MarkdownContent = File.ReadAllText("README.md");
+                MarkdownContent = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "README.md"));
 
             }
             catch(Exception ex)

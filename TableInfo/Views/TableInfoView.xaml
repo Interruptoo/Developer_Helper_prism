@@ -49,13 +49,13 @@
                 <ComboBoxItem Content="OR" />
             </ComboBox>-->
 
-            <CheckBox x:Name="chkRealTime"
+            <!--<CheckBox x:Name="chkRealTime"
                       Margin="5,0,0,0"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Center"
                       Content="실시간검색"
-                      IsChecked="True" />
-            <CheckBox x:Name="chkOwnerFilter"
+                      IsChecked="True" />-->
+            <!--<CheckBox x:Name="chkOwnerFilter"
                       Margin="5,0,0,0"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Center"
@@ -71,7 +71,7 @@
                         </Style.Triggers>
                     </Style>
                 </CheckBox.Style>
-            </CheckBox>
+            </CheckBox>-->
         </StackPanel>
 
         <StackPanel Grid.Column="2"
@@ -121,7 +121,7 @@
                 <ComboBoxItem Content="OR" />
             </ComboBox>-->
 
-            <Button x:Name="BtnSelect"
+            <!--<Button x:Name="BtnSelect"
                     Grid.Column="4"
                     Width="64"
                     Height="25"
@@ -143,7 +143,7 @@
                                Text="조회"
                                TextWrapping="WrapWithOverflow" />
                 </StackPanel>
-            </Button>
+            </Button>-->
         </DockPanel>
 
         <!--  row 1 col 0  -->

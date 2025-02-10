@@ -14,4 +14,9 @@
     <ProjectReference Include="..\TableInfo\TableInfo.csproj" />
     <ProjectReference Include="..\UserSetting\UserSetting.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
