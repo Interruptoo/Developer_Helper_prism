@@ -120,6 +120,7 @@
     <None Remove="Image\Icon\last.gif" />
     <None Remove="Image\Icon\Layer-Create.png" />
     <None Remove="Image\Icon\list.png" />
+    <None Remove="Image\Icon\List_Icon.png" />
     <None Remove="Image\Icon\lock.gif" />
     <None Remove="Image\Icon\loop.gif" />
     <None Remove="Image\Icon\mail.gif" />
@@ -314,6 +315,7 @@
     <Resource Include="Image\Icon\last.gif" />
     <Resource Include="Image\Icon\Layer-Create.png" />
     <Resource Include="Image\Icon\list.png" />
+    <Resource Include="Image\Icon\List_Icon.png" />
     <Resource Include="Image\Icon\lock.gif" />
     <Resource Include="Image\Icon\loop.gif" />
     <Resource Include="Image\Icon\mail.gif" />

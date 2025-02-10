@@ -24,5 +24,7 @@ namespace CommonCodeInfo.Views
         {
             InitializeComponent();
         }
+
+        
     }
 }

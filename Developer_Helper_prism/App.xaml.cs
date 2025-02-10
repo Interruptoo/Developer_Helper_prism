@@ -11,6 +11,7 @@ using System.Windows;
 using TableInfo;
 using UserSetting;
 using UserSetting.ViewModels;
+using CommonCodeInfo;
 
 namespace Developer_Helper_prism
 {
@@ -49,6 +50,7 @@ namespace Developer_Helper_prism
         {
             moduleCatalog.AddModule<TableInfoModule>();
             moduleCatalog.AddModule<UserSettingModule>();
+            moduleCatalog.AddModule<CommonCodeInfoModule>();
         }
     }
 }

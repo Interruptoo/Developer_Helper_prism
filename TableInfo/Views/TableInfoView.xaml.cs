@@ -24,5 +24,7 @@ namespace TableInfo.Views
         {
             InitializeComponent();
         }
+
+       
     }
 }
