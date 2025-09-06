@@ -56,10 +56,11 @@ namespace Developer_Helper_prism.ViewModels
                 new MenuModel { MenuName = "HomeView", MenuTitle = "Home", MenuTooltip = "Home", MenuDescription = "", MenuIcon = "/Core;component/Image/Icon/Home_icon.png" },
                 new MenuModel { MenuName = "TableInfoView", MenuTitle = "Table", MenuTooltip = "Table", MenuDescription = "", MenuIcon = "/Core;component/Image/Icon/DBTable.png" },
                 new MenuModel { MenuName = "SearchCommonCodeView", MenuTitle = "공통코드", MenuTooltip = "CommonCode", MenuDescription = "", MenuIcon = "/Core;component/Image/Icon/List_Icon.png" },
-                new MenuModel { MenuName = "SQLExcuteView", MenuTitle = "SQL", MenuTooltip = "SQL", MenuDescription = "", MenuIcon = "" },
+                new MenuModel { MenuName = "SQLExcuteView", MenuTitle = "EQS", MenuTooltip = "SQL", MenuDescription = "", MenuIcon = "" },
                 new MenuModel { MenuName = "SourceGeneratorView", MenuTitle = "SG", MenuTooltip = "SourceGenerator", MenuDescription = "", MenuIcon = "" },
                 new MenuModel { MenuName = "DBSourceView", MenuTitle = "DBSource", MenuTooltip = "DBSource", MenuDescription = "", MenuIcon = "" },
                 new MenuModel { MenuName = "EAMInfoView", MenuTitle = "EAM", MenuTooltip = "EAM", MenuDescription = "", MenuIcon = "" },
+                new MenuModel { MenuName = "DeployeeManagement", MenuTitle = "Deployee", MenuTooltip = "Deployee Management", MenuDescription = "", MenuIcon = "" },
                 new MenuModel { MenuName = "UserSettingLayOutView", MenuTitle = "Setting", MenuTooltip = "Setting", MenuDescription = "", MenuIcon = "/Core;component/Image/Icon/gnome-run.ico" },
             ];
         }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonCodeInfo", "..\CommonCodeInfo\CommonCodeInfo.csproj", "{53678352-FCA3-4736-8E5A-DCF2C58DE7DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnect", "..\DBConnect\DBConnect.csproj", "{DB08D080-335A-4BA8-B7FF-15181910415A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{53678352-FCA3-4736-8E5A-DCF2C58DE7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53678352-FCA3-4736-8E5A-DCF2C58DE7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53678352-FCA3-4736-8E5A-DCF2C58DE7DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB08D080-335A-4BA8-B7FF-15181910415A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB08D080-335A-4BA8-B7FF-15181910415A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB08D080-335A-4BA8-B7FF-15181910415A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB08D080-335A-4BA8-B7FF-15181910415A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
